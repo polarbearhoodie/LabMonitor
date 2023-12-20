@@ -4,5 +4,9 @@ services:
     build: .
     image: lwn/firewood
     container_name: firewood_service
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Los_Angeles
     ports:
       - 7810:8000
