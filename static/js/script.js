@@ -15,4 +15,5 @@ function updateCycle(){
     document.getElementById('subheader').innerText = timeString()
 }
 
+window.onload = updateCycle;
 setInterval(updateCycle, 1000);
