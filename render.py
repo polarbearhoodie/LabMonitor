@@ -13,7 +13,6 @@ def screenshot():
 
     driver.get('http://192.168.0.40:7810/')
     time.sleep(1)
-    driver.save_screenshot('tmp/source.png')
+    driver.save_screenshot('./tmp/source.png')
 
-    driver.close()
     driver.quit()
