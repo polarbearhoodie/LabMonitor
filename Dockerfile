@@ -11,5 +11,4 @@ RUN pip install -r requirements.txt
 COPY . .
 
 CMD python3 web.py &
-EXPOSE 8000
 CMD gunicorn main:app
