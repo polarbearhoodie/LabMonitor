@@ -1,4 +1,3 @@
-import time
 from selenium import webdriver
 from selenium.webdriver import ChromeOptions
 
@@ -12,7 +11,6 @@ def screenshot():
     driver.set_window_size(616, 938)
 
     driver.get('http://192.168.0.40:7810/')
-    time.sleep(1)
     driver.save_screenshot('./tmp/source.png')
 
     driver.quit()
