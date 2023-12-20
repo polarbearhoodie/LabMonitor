@@ -2,7 +2,6 @@ import os
 import render
 from flask import Flask, render_template, send_file
 app = Flask("firewood")
-browser = render.init_diver()
 
 @app.route("/")
 def index():
@@ -17,6 +16,6 @@ def image():
 
 def generate_image(page):
     # we use conversion to drop from three channels to a single 8-bit channel
-    render.save_image(browser)
+    render.screenshot()
     os.system("gm convert tmp/source.png tmp/lossy.jpg")
     os.system("gm convert tmp/lossy.jpg -colorspace Gray -resize 600x800 tmp/output.png")

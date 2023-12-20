@@ -5,8 +5,6 @@ services:
     image: lwn/firewood
     container_name: firewood_service
     environment:
-      - PUID=1000
-      - PGID=1000
       - TZ=America/Los_Angeles
     volumes:
       - ./tmp:
@@ -15,6 +13,8 @@ services:
   selenium:
     image: selenium/standalone-chrome
     container_name: firewood_image
+    environment:
+      - TZ=America/Los_Angeles
     ports:
       - 7811:4444
     shm_size: 2gb
