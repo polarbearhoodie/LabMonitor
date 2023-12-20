@@ -8,5 +8,13 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/Los_Angeles
+    volumes:
+      - ./tmp:
     ports:
       - 7810:8000
+  selenium:
+    image: selenium/standalone-chrome
+    container_name: firewood_image
+    ports:
+      - 7811:4444
+    shm_size: 2gb
