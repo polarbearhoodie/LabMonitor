@@ -1,7 +1,12 @@
 import os
+import threading
+from render import render
 from flask import Flask, render_template, send_file
 app = Flask("firewood")
 
+# begin the image service
+image_service = threading.Thread(target=render)
+image_service.start()
 
 @app.route("/")
 def index():
