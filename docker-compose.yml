@@ -6,8 +6,6 @@ services:
     container_name: firewood_service
     environment:
       - TZ=America/Los_Angeles
-    volumes:
-      - ./tmp:
     ports:
       - 7810:8000
   selenium:
