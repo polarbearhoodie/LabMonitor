@@ -9,5 +9,5 @@ RUN pip install -r requirements.txt
 
 RUN apt install graphicsmagick -y
 
-CMD gunicorn main:app &
 CMD python3 web.py &
+CMD gunicorn main:app
