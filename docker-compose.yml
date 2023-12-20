@@ -13,8 +13,9 @@ services:
     container_name: firewood_image
     environment:
       - TZ=US/Pacific
-      - GRID_MAX_SESSIONS=4
-      - GRID_BROWSER_TIMEOUT=10000
+      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
+      - SE_NODE_MAX_SESSIONS=4
+      - SE_NODE_SESSION_TIMEOUT=15
     ports:
       - 7811:4444
     shm_size: 2gb
