@@ -1,0 +1,4 @@
+flask~=2.2.3
+gunicorn
+imgkit~=1.2.3
+selenium~=4.16.0

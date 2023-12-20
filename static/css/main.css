@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("/static/fonts/rm.ttf");
+}
+
+body{
+    font-family: "Roboto Mono", monospace;
+    line-height: 65%;
+}
+

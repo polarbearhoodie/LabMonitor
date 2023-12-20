@@ -1,0 +1,8 @@
+version: "0.1"
+services:
+  firewood:
+    build: .
+    image: lwn/firewood
+    container_name: firewood_service
+    ports:
+      - 7810:8000
