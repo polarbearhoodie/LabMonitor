@@ -13,7 +13,7 @@ driver.set_window_size(616, 938)
 loaded = False
 while not loaded:
     try:
-        driver.get('http://localhost:5000/')
+        driver.get('192.168.0.40:7810/')
         loaded = True
     except selenium.common.exceptions.WebDriverException:
         loaded = False
