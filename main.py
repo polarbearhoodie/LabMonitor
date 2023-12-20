@@ -15,7 +15,7 @@ def image():
 
 
 def generate_image(page):
+    render.screenshot() # this will occupy a worker!
     # we use conversion to drop from three channels to a single 8-bit channel
-    render.screenshot()
     os.system("gm convert tmp/source.png tmp/lossy.jpg")
     os.system("gm convert tmp/lossy.jpg -colorspace Gray -resize 600x800 tmp/output.png")
