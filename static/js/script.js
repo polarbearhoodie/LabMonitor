@@ -1,14 +1,23 @@
+function prependZero(number){
+    return ('0' + number).slice(-2)
+}
+
 function timeString(){
     const date = new Date();
 
     let year = date.getFullYear();
-    let month = date.getMonth();
-    let day = date.getDay();
+    let month = date.getMonth() + 1;
+    let day = date.getDate();
     let hour = date.getHours();
-    let minute = date.getMinutes();
-    let seconds = date.getSeconds();
+    let minute = prependZero(date.getMinutes());
 
-    return `${hour}:${minute}:${seconds} - ${month}/${day}/${year}`;
+
+    if (hour <= 12){
+        return `${hour}:${minute}AM - ${month}/${day}/${year}`;
+    }
+    else{
+        return `${hour%12}:${minute}PM - ${month}/${day}/${year}`;
+    }
 }
 
 function updateCycle(){
