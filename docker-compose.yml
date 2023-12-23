@@ -8,14 +8,3 @@ services:
       - TZ=America/Los_Angeles
     ports:
       - 7810:8000
-  selenium:
-    image: selenium/standalone-chrome
-    container_name: firewood_image
-    environment:
-      - TZ=US/Pacific
-      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
-      - SE_NODE_MAX_SESSIONS=4
-      - SE_NODE_SESSION_TIMEOUT=15
-    ports:
-      - 7811:4444
-    shm_size: 2gb
