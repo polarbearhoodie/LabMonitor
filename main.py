@@ -1,15 +1,15 @@
 import os
-# import render
 from flask import Flask, render_template, send_file
-app = Flask("firewood")
+
+app = Flask("Monitor")
 
 @app.route("/")
 def index():
     return render_template("index.html")
 
 
-#@app.route("/image")
-#def image():
+@app.route("/image")
+def image():
     # generate_image("index.html")
     # return send_file('tmp/output.png', mimetype='image/gif')
 
