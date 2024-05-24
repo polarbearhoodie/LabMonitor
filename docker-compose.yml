@@ -1,4 +1,4 @@
-version: "0.1"
+---
 services:
   firewood:
     build: .
@@ -7,4 +7,4 @@ services:
     environment:
       - TZ=America/Los_Angeles
     ports:
-      - 7810:8000
+      - 7423:7423
