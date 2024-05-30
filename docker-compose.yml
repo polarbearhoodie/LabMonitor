@@ -2,9 +2,6 @@
 services:
   firewood:
     build: .
-    image: lwn/firewood
-    container_name: firewood_service
+    container_name: lab-monitor
     environment:
       - TZ=America/Los_Angeles
-    ports:
-      - 7423:7423
